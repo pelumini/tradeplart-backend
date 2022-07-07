@@ -66,6 +66,21 @@ const StartServer = () => {
   router.get('/ping', (req, res, next) =>
     res.status(200).json({ hello: 'world' })
   );
+  router.get('/totaltrades', (req, res, next) =>
+    res.status(200).json({ hello: 'world' })
+  );
+  router.get('/totalclients', (req, res, next) =>
+    res.status(200).json({ hello: 'world' })
+  );
+  router.get('/toptrades', (req, res, next) =>
+    res.status(200).json({ hello: 'world' })
+  );
+  router.get('/rejectedTrades', (req, res, next) =>
+    res.status(200).json({ hello: 'world' })
+  );
+  router.get('/cashbymonth', (req, res, next) =>
+    res.status(200).json({ hello: 'world' })
+  );
 
   /** Error handling */
   router.use((req, res, next) => {
