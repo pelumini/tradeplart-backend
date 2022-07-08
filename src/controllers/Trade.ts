@@ -51,13 +51,15 @@ const readRejectedTrades = (
   res: Response,
   next: NextFunction
 ) => {
-  res.status(200).json({
-    tradeId: '34333',
-    cptyName: 'A CounterParty Inc',
-    ticketStatus: 'Rejected',
-    isin: '7',
-    error: 'Rejected: Market Data Outdated',
-  });
+  res.status(200).json([
+    {
+      tradeId: '34333',
+      cptyName: 'A CounterParty Inc',
+      ticketStatus: 'Rejected',
+      isin: '7',
+      error: 'Rejected: Market Data Outdated',
+    },
+  ]);
 };
 
 const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
