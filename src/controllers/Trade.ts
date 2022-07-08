@@ -32,21 +32,18 @@ const readAll = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const readTotalTrades = (req: Request, res: Response, next: NextFunction) => {
-  return Trade.find()
-    .then((trades) => res.status(200).json({ trades }))
-    .catch((error) => res.status(500).json({ error }));
+  res.status(200).send('23');
 };
 
 const readTotalClients = (req: Request, res: Response, next: NextFunction) => {
-  return Trade.find()
-    .then((trades) => res.status(200).json({ trades }))
-    .catch((error) => res.status(500).json({ error }));
+  res.status(200).send('6');
 };
 
 const readTopTrades = (req: Request, res: Response, next: NextFunction) => {
-  return Trade.find()
-    .then((trades) => res.status(200).json({ trades }))
-    .catch((error) => res.status(500).json({ error }));
+  res.status(200).send([
+    { tradeId: '34333', value: '7097.00' },
+    { tradeId: '34337', value: '673773.91' },
+  ]);
 };
 
 const readRejectedTrades = (
@@ -54,9 +51,13 @@ const readRejectedTrades = (
   res: Response,
   next: NextFunction
 ) => {
-  return Trade.find()
-    .then((trades) => res.status(200).json({ trades }))
-    .catch((error) => res.status(500).json({ error }));
+  res.status(200).json({
+    tradeId: '34333',
+    cptyName: 'A CounterParty Inc',
+    ticketStatus: 'Rejected',
+    isin: '7',
+    error: 'Rejected: Market Data Outdated',
+  });
 };
 
 const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
