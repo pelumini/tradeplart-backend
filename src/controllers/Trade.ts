@@ -36,7 +36,7 @@ const readTotalTrades = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const readTotalClients = (req: Request, res: Response, next: NextFunction) => {
-  res.status(200).send('6');
+  res.status(200).json({ totalClients: '6' });
 };
 
 const readTopTrades = (req: Request, res: Response, next: NextFunction) => {
