@@ -32,7 +32,7 @@ const readAll = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const readTotalTrades = (req: Request, res: Response, next: NextFunction) => {
-  res.status(200).send('23');
+  res.status(200).json({ totalTrades: '23' });
 };
 
 const readTotalClients = (req: Request, res: Response, next: NextFunction) => {
