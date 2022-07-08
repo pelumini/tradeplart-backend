@@ -64,25 +64,25 @@ const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
   res.status(200).json([
     {
       name: 'Repo',
-      data: [5, 5, 7, 9],
+      data: [5, 5, 7, 9, 10, 11, 23, 12, 13, 14, 15, 20],
       color: 'Red',
       type: 'Repo',
     },
     {
       name: 'Reverse Repo',
-      data: [10, 11, 23, 1],
+      data: [500, 80, 13, 14, 15, 20, 800, 90, 10, 11, 23, 1],
       color: 'Blue',
       type: 'Reverse Repo',
     },
     {
       name: 'Sell Buy',
-      data: [5, 5, 7, 0],
+      data: [1001, 300, 9, 9009, 5, 5, 700, 0, 45, 10, 11, 23],
       color: 'Green',
       type: '7',
     },
     {
       name: 'Buy Sell',
-      data: [10, 11, 23, 77],
+      data: [89, 9009, 5, 511, 700, 10, 191, 233, 77, 77, 500, 1],
       color: 'Yellow',
       type: 'Repo',
     },
