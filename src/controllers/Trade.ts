@@ -61,9 +61,20 @@ const readRejectedTrades = (
 };
 
 const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
-  return Trade.find()
-    .then((trades) => res.status(200).json({ trades }))
-    .catch((error) => res.status(500).json({ error }));
+  res.status(200).json([
+    {
+      name: 'Repo',
+      data: [5, 5, 7],
+      color: 'Red',
+      type: '7',
+    },
+    {
+      name: 'Repo',
+      data: [10, 11, 23],
+      color: 'Red',
+      type: '7',
+    },
+  ]);
 };
 
 const updateTrade = (req: Request, res: Response, next: NextFunction) => {
