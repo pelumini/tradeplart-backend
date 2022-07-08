@@ -31,6 +31,40 @@ const readAll = (req: Request, res: Response, next: NextFunction) => {
     .catch((error) => res.status(500).json({ error }));
 };
 
+const readTotalTrades = (req: Request, res: Response, next: NextFunction) => {
+  return Trade.find()
+    .then((trades) => res.status(200).json({ trades }))
+    .catch((error) => res.status(500).json({ error }));
+};
+
+const readTotalClients = (req: Request, res: Response, next: NextFunction) => {
+  return Trade.find()
+    .then((trades) => res.status(200).json({ trades }))
+    .catch((error) => res.status(500).json({ error }));
+};
+
+const readTopTrades = (req: Request, res: Response, next: NextFunction) => {
+  return Trade.find()
+    .then((trades) => res.status(200).json({ trades }))
+    .catch((error) => res.status(500).json({ error }));
+};
+
+const readRejectedTrades = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  return Trade.find()
+    .then((trades) => res.status(200).json({ trades }))
+    .catch((error) => res.status(500).json({ error }));
+};
+
+const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
+  return Trade.find()
+    .then((trades) => res.status(200).json({ trades }))
+    .catch((error) => res.status(500).json({ error }));
+};
+
 const updateTrade = (req: Request, res: Response, next: NextFunction) => {
   const tradeId = req.params.tradeId;
   return Trade.findById(tradeId)
@@ -63,6 +97,11 @@ export default {
   createTrade,
   readTrade,
   readAll,
+  readTotalTrades,
+  readTotalClients,
+  readTopTrades,
+  readRejectedTrades,
+  readCashByMonth,
   updateTrade,
   deleteTrade,
 };

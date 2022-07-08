@@ -37,8 +37,14 @@ router.post(
   ValidateJoi(Schemas.trade.create),
   controller.createTrade
 );
-router.get('/get/:tradeId', controller.readTrade);
-router.get('/', controller.readAll);
+router.get('/trade/newid', controller.readTrade);
+router.get('/trades', controller.readAll);
+router.get('/totaltrades', controller.readTotalTrades);
+router.get('/totalclients', controller.readTotalClients);
+router.get('/toptrades', controller.readTopTrades);
+router.get('/rejectedTrades', controller.readRejectedTrades);
+router.get('/cashbymonth', controller.readCashByMonth);
+
 router.patch(
   '/update/:tradeId',
   ValidateJoi(Schemas.trade.update),
