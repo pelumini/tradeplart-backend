@@ -69,7 +69,19 @@ const readCashByMonth = (req: Request, res: Response, next: NextFunction) => {
       type: '7',
     },
     {
-      name: 'Repo',
+      name: 'Reverse Repo',
+      data: [10, 11, 23],
+      color: 'Red',
+      type: '7',
+    },
+    {
+      name: 'Sell Buy',
+      data: [5, 5, 7],
+      color: 'Red',
+      type: '7',
+    },
+    {
+      name: 'Buy Sell',
       data: [10, 11, 23],
       color: 'Red',
       type: '7',
