@@ -3,8 +3,9 @@ import http from 'http';
 import mongoose from 'mongoose';
 import { config } from './config';
 import Logging from './library/Logging';
-// import authorRoutes from './routes/Author';
-// import bookRoutes from './routes/Book';
+import authorRoutes from './routes/Author';
+import tradeRoutes from './routes/Trade';
+import bookRoutes from './routes/Book';
 
 const router = express();
 
@@ -59,26 +60,12 @@ const StartServer = () => {
   });
 
   /** Routes */
-  //   router.use('/authors', authorRoutes);
-  //   router.use('/books', bookRoutes);
+  router.use('/authors', authorRoutes);
+  router.use('/', tradeRoutes);
+  router.use('/books', bookRoutes);
 
   /** Healthcheck */
   router.get('/ping', (req, res, next) =>
-    res.status(200).json({ hello: 'world' })
-  );
-  router.get('/totaltrades', (req, res, next) =>
-    res.status(200).json({ hello: 'world' })
-  );
-  router.get('/totalclients', (req, res, next) =>
-    res.status(200).json({ hello: 'world' })
-  );
-  router.get('/toptrades', (req, res, next) =>
-    res.status(200).json({ hello: 'world' })
-  );
-  router.get('/rejectedTrades', (req, res, next) =>
-    res.status(200).json({ hello: 'world' })
-  );
-  router.get('/cashbymonth', (req, res, next) =>
     res.status(200).json({ hello: 'world' })
   );
 
